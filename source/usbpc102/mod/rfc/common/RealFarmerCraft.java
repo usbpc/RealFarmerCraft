@@ -23,7 +23,7 @@ public static RealFarmerCraft instance;
 public static CommonProxy proxy;
 
 private static Item myFirstItem = new MyFirstItem(ItemIDs.MYFIRSTITEM);
-private static Item myIngot = new Item(5001).setMaxStackSize(16).setCreativeTab(CreativeTabs.tabMaterials).setUnlocalizedName("myIngot");
+private static Item myIngot = new Item(ItemIDs.MYINGOT).setMaxStackSize(16).setCreativeTab(CreativeTabs.tabMaterials).setUnlocalizedName("myIngot");
 
     /***
 * This is code that is executed prior to your mod being initialized into of Minecraft

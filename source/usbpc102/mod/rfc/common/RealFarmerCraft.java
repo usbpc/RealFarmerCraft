@@ -1,6 +1,5 @@
 package usbpc102.mod.rfc.common;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import usbpc102.mod.rfc.item.MyFirstItem;
 import usbpc102.mod.rfc.references.ItemIDs;
@@ -23,7 +22,6 @@ public static RealFarmerCraft instance;
 public static CommonProxy proxy;
 
 private static Item myFirstItem = new MyFirstItem(ItemIDs.MYFIRSTITEM);
-private static Item myIngot = new Item(ItemIDs.MYINGOT).setMaxStackSize(16).setCreativeTab(CreativeTabs.tabMaterials).setUnlocalizedName("myIngot");
 
     /***
 * This is code that is executed prior to your mod being initialized into of Minecraft
@@ -38,6 +36,7 @@ private static Item myIngot = new Item(ItemIDs.MYINGOT).setMaxStackSize(16).setC
 */
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+    	Blocks.init();
     
     }
     
@@ -55,7 +54,7 @@ private static Item myIngot = new Item(ItemIDs.MYINGOT).setMaxStackSize(16).setC
     @EventHandler
     public void init(FMLInitializationEvent event) {
         LanguageRegistry.addName(myFirstItem, "My First Item");
-        LanguageRegistry.addName(myIngot, "My Ingot");
+        Blocks.addNames();
     }
     
     /***

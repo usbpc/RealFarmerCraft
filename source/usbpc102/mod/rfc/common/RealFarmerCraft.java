@@ -1,5 +1,9 @@
 package usbpc102.mod.rfc.common;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import usbpc102.mod.rfc.item.MyFirstItem;
+import usbpc102.mod.rfc.references.ItemIDs;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -7,6 +11,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid = "RealFarmerCraft", name = "Real Farmer Craft", version = "0.0.0")
 public class RealFarmerCraft {
@@ -16,6 +21,9 @@ public static RealFarmerCraft instance;
 
 @SidedProxy(clientSide = "usbpc102.mod.rfc.client.ClientProxy", serverSide = "usbpc102.mod.rfc.common.CommonProxy")
 public static CommonProxy proxy;
+
+private static Item myFirstItem = new MyFirstItem(ItemIDs.MYFIRSTITEM);
+private static Item myIngot = new Item(5001).setMaxStackSize(16).setCreativeTab(CreativeTabs.tabMaterials).setUnlocalizedName("myIngot");
 
     /***
 * This is code that is executed prior to your mod being initialized into of Minecraft
@@ -30,7 +38,7 @@ public static CommonProxy proxy;
 */
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        
+    
     }
     
     /***
@@ -46,7 +54,8 @@ public static CommonProxy proxy;
 */
     @EventHandler
     public void init(FMLInitializationEvent event) {
-        
+        LanguageRegistry.addName(myFirstItem, "My First Item");
+        LanguageRegistry.addName(myIngot, "My Ingot");
     }
     
     /***

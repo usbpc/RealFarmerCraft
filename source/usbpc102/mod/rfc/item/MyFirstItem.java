@@ -1,5 +1,8 @@
 package usbpc102.mod.rfc.item;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -10,12 +13,15 @@ public class MyFirstItem extends Item {
 
 	public MyFirstItem(int id) {
 		super(id);
-		setMaxStackSize(64);
+		setMaxStackSize(100);
 		setCreativeTab(CreativeTabs.tabMisc);
 		setUnlocalizedName("myFirstItem");
 	}
 	
-	
+	@SideOnly(Side.CLIENT)
+	public void registerIcons(IconRegister iconRegister) {
+		this.itemIcon = iconRegister.registerIcon("RealFarmerCraft:" + this.getUnlocalizedName().substring(5));
+	}
 
     public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer) {
     	
@@ -26,6 +32,8 @@ public class MyFirstItem extends Item {
     		
     		//Gives out a list of all players on server
     		//System.out.println(par2World.playerEntities);
+    		par2World.playerEntities.size();
+    		System.out.println(par2World.playerEntities.get(0));
    		 
    		return par1ItemStack;
    	 }

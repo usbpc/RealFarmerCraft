@@ -1,6 +1,5 @@
-package usbpc102.mod.rfc.client;
+package usbpc102.mod.rfc.proxy;
 
-import usbpc102.mod.rfc.common.CommonProxy;
 
 public class ClientProxy extends CommonProxy {
 	

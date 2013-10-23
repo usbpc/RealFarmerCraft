@@ -8,7 +8,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.Icon;
 import net.minecraft.world.World;
-import usbpc102.mod.rfc.references.BlockNames;
+import usbpc102.mod.rfc.references.BlockInfo;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -20,7 +20,7 @@ public class MyFirstBlock extends Block {
 		setCreativeTab(CreativeTabs.tabBlock);
 		setHardness(2);
 		setStepSound(Block.soundGlassFootstep);
-		setUnlocalizedName(BlockNames.MYFIRSTBLOCK_UNLOCALIZED_NAME);
+		setUnlocalizedName(BlockInfo.MYFIRSTBLOCK_UNLOCALIZED_NAME);
 		
 	}
 	
@@ -36,10 +36,10 @@ public class MyFirstBlock extends Block {
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void registerIcons(IconRegister register) {
-		topIcon = register.registerIcon(BlockNames.TEXTURE_LOCATION + ":" + BlockNames.MYFIRSTBLOCK_TOP);
-		bottomIcon = register.registerIcon(BlockNames.TEXTURE_LOCATION + ":" + BlockNames.MYFIRSTBLOCK_BOTTOM);
-		sideIcon = register.registerIcon(BlockNames.TEXTURE_LOCATION + ":" + BlockNames.MYFIRSTBLOCK_SIDE);
-		disabledIcon = register.registerIcon(BlockNames.TEXTURE_LOCATION + ":" + BlockNames.MYFIRSTBLOCK_DISABLED);
+		topIcon = register.registerIcon(BlockInfo.TEXTURE_LOCATION + ":" + BlockInfo.MYFIRSTBLOCK_TOP);
+		bottomIcon = register.registerIcon(BlockInfo.TEXTURE_LOCATION + ":" + BlockInfo.MYFIRSTBLOCK_BOTTOM);
+		sideIcon = register.registerIcon(BlockInfo.TEXTURE_LOCATION + ":" + BlockInfo.MYFIRSTBLOCK_SIDE);
+		disabledIcon = register.registerIcon(BlockInfo.TEXTURE_LOCATION + ":" + BlockInfo.MYFIRSTBLOCK_DISABLED);
 	}
 	
 	@SideOnly(Side.CLIENT)

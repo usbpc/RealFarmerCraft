@@ -3,7 +3,7 @@ package usbpc102.mod.rfc.references;
 
 //Continue Mod tutorial on http://courses.vswe.se/?course=3&lecture=25&full=1 19:51 To finish my Block
 
-public class BlockNames {
+public class BlockInfo {
 	
 	public static final String TEXTURE_LOCATION = "realfarmercraft";
 	

@@ -2,6 +2,7 @@ package usbpc102.mod.rfc.common;
 
 import net.minecraft.item.Item;
 import usbpc102.mod.rfc.item.MyFirstItem;
+import usbpc102.mod.rfc.proxy.CommonProxy;
 import usbpc102.mod.rfc.references.ItemIDs;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -18,7 +19,7 @@ public class RealFarmerCraft {
 @Instance("RealFarmerCraft")
 public static RealFarmerCraft instance;
 
-@SidedProxy(clientSide = "usbpc102.mod.rfc.client.ClientProxy", serverSide = "usbpc102.mod.rfc.common.CommonProxy")
+@SidedProxy(clientSide = "usbpc102.mod.rfc.proxy.ClientProxy", serverSide = "usbpc102.mod.rfc.proxy.CommonProxy")
 public static CommonProxy proxy;
 
 private static Item myFirstItem = new MyFirstItem(ItemIDs.MYFIRSTITEM);

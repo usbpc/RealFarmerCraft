@@ -17,5 +17,6 @@ public class BlockNames {
 	public static final String MYFIRSTBLOCK_TOP = "myfirstblock_top";
 	public static final String MYFIRSTBLOCK_BOTTOM = "myfirstblock_bottom";
 	public static final String MYFIRSTBLOCK_SIDE = "myfirstblock_side";
+	public static final String MYFIRSTBLOCK_DISABLED = "myfirstblock_disabled";
 	
 }

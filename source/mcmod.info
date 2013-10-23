@@ -1,0 +1,18 @@
+[
+{
+  "modid" : "RealFarmerCraft",
+  "name" : "Real Farmer Craft",
+  "version" : "0.0.0",
+  "credits" : "Thanks to Henrik(a friend of mine) for the awesome idea!",
+  "authors": [
+    "usbpc102"
+  ],
+  "description": "This mod is in development and will later add tractors and other farming related stuff, like seed bags.",
+  "url" : "",
+  "updateUrl" : "",
+  "logoFile" : "",
+  "parent" : "",
+  "screenshots": [
+  ]
+}
+]

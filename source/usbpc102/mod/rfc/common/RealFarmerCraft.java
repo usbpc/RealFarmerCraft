@@ -1,9 +1,6 @@
 package usbpc102.mod.rfc.common;
 
-import net.minecraft.item.Item;
-import usbpc102.mod.rfc.item.MyFirstItem;
 import usbpc102.mod.rfc.proxy.CommonProxy;
-import usbpc102.mod.rfc.references.ItemIDs;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -11,7 +8,6 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid = "RealFarmerCraft", name = "Real Farmer Craft", version = "0.0.0")
 public class RealFarmerCraft {
@@ -22,22 +18,23 @@ public static RealFarmerCraft instance;
 @SidedProxy(clientSide = "usbpc102.mod.rfc.proxy.ClientProxy", serverSide = "usbpc102.mod.rfc.proxy.CommonProxy")
 public static CommonProxy proxy;
 
-private static Item myFirstItem = new MyFirstItem(ItemIDs.MYFIRSTITEM);
 
     /***
-* This is code that is executed prior to your mod being initialized into of Minecraft
-* Examples of code that could be run here;
-*
-* Initializing your items/blocks (you must do this here)
-* Setting up your own custom logger for writing log data to
-* Loading your language translations for your mod (if your mod has translations for other languages)
-* Registering your mod's key bindings and sounds
-*
-* @param event The Forge ModLoader pre-initialization event
-*/
+	* This is code that is executed prior to your mod being initialized into of Minecraft
+	* Examples of code that could be run here;
+	*
+	* Initializing your items/blocks (you must do this here)
+	* Setting up your own custom logger for writing log data to
+	* Loading your language translations for your mod (if your mod has translations for other languages)
+	* Registering your mod's key bindings and sounds
+	*
+	* @param event The Forge ModLoader pre-initialization event
+	*/
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
     	Blocks.init();
+    	
+    	Items.init();
     
     }
     
@@ -54,8 +51,9 @@ private static Item myFirstItem = new MyFirstItem(ItemIDs.MYFIRSTITEM);
 */
     @EventHandler
     public void init(FMLInitializationEvent event) {
-        LanguageRegistry.addName(myFirstItem, "My First Item");
         Blocks.addNames();
+        
+        Items.addNames();
     }
     
     /***

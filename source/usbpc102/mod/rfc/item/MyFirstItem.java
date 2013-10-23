@@ -1,5 +1,6 @@
 package usbpc102.mod.rfc.item;
 
+import usbpc102.mod.rfc.references.ItemInfo;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -17,7 +18,7 @@ public class MyFirstItem extends Item {
 	
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) {
-		this.itemIcon = iconRegister.registerIcon("RealFarmerCraft:" + this.getUnlocalizedName().substring(5));
+		this.itemIcon = iconRegister.registerIcon(ItemInfo.TEXTURE_LOCATION + ":" + ItemInfo.MYFIRSTITEM_TEXTURE);
 	}
 
     /*public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer) {

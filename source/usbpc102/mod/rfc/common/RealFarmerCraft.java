@@ -39,10 +39,9 @@ public static CommonProxy proxy;
 	*/
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+    	
     	ConfigHandler.init(event.getSuggestedConfigurationFile());
-    	
     	Blocks.init();
-    	
     	Items.init();
     
     }
@@ -61,8 +60,9 @@ public static CommonProxy proxy;
     @EventHandler
     public void init(FMLInitializationEvent event) {
         Blocks.addNames();
-        
         Items.addNames();
+        
+        Items.addRecipies();
     }
     
     /***

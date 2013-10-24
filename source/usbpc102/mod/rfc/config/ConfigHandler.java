@@ -2,6 +2,7 @@ package usbpc102.mod.rfc.config;
 
 import java.io.File;
 
+import usbpc102.mod.rfc.references.ItemInfo;
 import net.minecraftforge.common.Configuration;
 
 public class ConfigHandler {
@@ -11,8 +12,8 @@ public class ConfigHandler {
 		Configuration config = new Configuration(file);
 	
 		config.load();
-		//Würde einen Integer aus meine Config File in der Kategorie "usless Stuff" mit dem Namen "example" und dem Standart wert 5.
-		//int test = config.get("usless stuff",  "example", 5).getInt();
+		//Läd die ItemID von meinem Item Seed Bag, setzt den wert falls nicht vorganden auf 6000
+		ItemInfo.ITEMSEEDBAG_ID = config.getItem(ItemInfo.ITEMSEEDBAG_KEY, ItemInfo.ITEMSEEDBAG_DEFAULT).getInt() - 256;
 		
 		config.save();
 	}

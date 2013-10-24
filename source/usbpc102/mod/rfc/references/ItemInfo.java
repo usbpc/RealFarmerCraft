@@ -6,7 +6,7 @@ public class ItemInfo {
 	public static final String TEXTURE_LOCATION = "realfarmercraft";
 	
 	//Hier wird die Item ID die Standart Item ID, und einzigartiger Item key gesetzt.
-	public static int ITEMSEEDBAG_ID = 6000;
+	public static int ITEMSEEDBAG_ID;
 	public static final int ITEMSEEDBAG_DEFAULT = 6000;
 	public static final String ITEMSEEDBAG_KEY = "ItemSeedBag";
 

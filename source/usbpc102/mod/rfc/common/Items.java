@@ -1,10 +1,12 @@
 package usbpc102.mod.rfc.common;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import usbpc102.mod.rfc.item.ItemSeedBag;
 import usbpc102.mod.rfc.references.ItemInfo;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class Items {
 
@@ -20,6 +22,11 @@ public class Items {
 	public static void addNames() {
 		//Sagt Minecraft wie mein Item ingame heiﬂen soll.
 		LanguageRegistry.addName(itemSeedBag, ItemInfo.ITEMSEEDBAG_NAME);
+		
+	}
+	
+	public static void addRecipies() {
+		GameRegistry.addRecipe(new ItemStack(itemSeedBag), new Object[] {"WWW", "WSW", "WWW", 'W', Block.cloth, 'S', Item.seeds});
 		
 	}
 }

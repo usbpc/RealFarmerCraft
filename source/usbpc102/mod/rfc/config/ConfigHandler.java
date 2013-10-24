@@ -11,7 +11,7 @@ public class ConfigHandler {
 		Configuration config = new Configuration(file);
 	
 		config.load();
-		
+		//Würde einen Integer aus meine Config File in der Kategorie "usless Stuff" mit dem Namen "example" und dem Standart wert 5.
 		//int test = config.get("usless stuff",  "example", 5).getInt();
 		
 		config.save();

@@ -44,6 +44,7 @@ public class MyFirstBlock extends Block {
 	
 	@SideOnly(Side.CLIENT)
 	@Override
+	//Bestimmt welche Seite welche Texture bekommen soll. 
 	public Icon getIcon(int side, int meta) {
 		if (side == 0) {
 			return bottomIcon;
@@ -54,11 +55,13 @@ public class MyFirstBlock extends Block {
 		}	
 	}
 	
+	//Selbsterstellte Methode um zu überprüfen ob MyFirstBlock gerade Deaktiviert ist oder nicht.
 	private boolean isDisabled(int meta) {
 		return meta % 2 == 1;
 	}
 	
 	@Override
+	//Wird von Minecraft aufgerufen, wenn ein Entity auf meinem Block läuft.
 	public void onEntityWalking(World world, int x, int y, int z, Entity entity) {
 		if (!world.isRemote && !isDisabled(world.getBlockMetadata(x, y, z))) {
 			spawnAnvil(world, x, y + 20, z);
@@ -67,6 +70,7 @@ public class MyFirstBlock extends Block {
 	}
 	
 	@Override
+	//Wird von Minecraft aufgerufen, wenn ein  Block neben meinem Block ein Blockupdate sendet.
 	public void onNeighborBlockChange(World world, int x, int y, int z, int id) {
 		int meta = world.getBlockMetadata(x, y, z);
 		if (!world.isRemote && world.isBlockIndirectlyGettingPowered(x, y, z) && !isDisabled(meta) && meta / 2 == 0) {
@@ -82,6 +86,7 @@ public class MyFirstBlock extends Block {
 		}
 	}
 	
+	//Selbst erstellte Methode um einen Anvil in der Welt zu erstellen.
 	private void spawnAnvil(World world, int x, int y, int z) {
 		if (world.isAirBlock(x, y, z)) {
 			world.setBlock(x, y, z, Block.anvil.blockID);
@@ -89,6 +94,7 @@ public class MyFirstBlock extends Block {
 	}
 	
 	@Override
+	//Wird von Minecraft Aufgerufen, wenn ein Spieler einen Rechtsklich auf meinen Block macht.
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
 		if (!world.isRemote) {
 			int meta = world.getBlockMetadata(x, y, z);

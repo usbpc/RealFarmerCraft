@@ -5,15 +5,19 @@ package usbpc102.mod.rfc.references;
 
 public class BlockInfo {
 	
+	//Hier wird der Ordner angegeben in dem meine Block Texturen sind.
 	public static final String TEXTURE_LOCATION = "realfarmercraft";
 	
+	//Hier wird die Block ID die Standart Block ID, und einzigartiger Block key gesetzt.
 	public static int MYFIRSTBLOCK_ID = 600;
 	public static final String MYFIRSTBLOCK_KEY = "MyFirstBlock";
 	public static final int MYFIRSTBLOCK_DEFAULT = 2000;
 	
+	//Hier Wird der interne Name von meinem Block und der für Menschen lesliche Name von meinem Block gesetzt.
 	public static final String MYFIRSTBLOCK_UNLOCALIZED_NAME = "myFirstBlock";
 	public static final String MYFIRSTBLOCK_NAME = "My First Block";
 	
+	//Hier wird angegeben, wie die Texture Dateien für meinen Block heißen.
 	public static final String MYFIRSTBLOCK_TOP = "myfirstblock_top";
 	public static final String MYFIRSTBLOCK_BOTTOM = "myfirstblock_bottom";
 	public static final String MYFIRSTBLOCK_SIDE = "myfirstblock_side";

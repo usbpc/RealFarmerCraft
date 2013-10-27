@@ -1,6 +1,7 @@
 package usbpc102.mod.rfc.common;
 
 import usbpc102.mod.rfc.config.ConfigHandler;
+import usbpc102.mod.rfc.gui.GuiHandler;
 import usbpc102.mod.rfc.network.PacketHandler;
 import usbpc102.mod.rfc.proxy.CommonProxy;
 import usbpc102.mod.rfc.references.ModInfo;
@@ -59,6 +60,7 @@ public static CommonProxy proxy;
 */
     @EventHandler
     public void init(FMLInitializationEvent event) {
+        new GuiHandler();
         Blocks.addNames();
         Items.addNames();
         
